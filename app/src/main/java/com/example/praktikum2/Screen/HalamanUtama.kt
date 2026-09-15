@@ -27,12 +27,10 @@ fun HalamanUtama() {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        // Tampilkan komponen Profil Mahasiswa dari Latihan 2
         ProfilMahasiswa()
 
         Spacer(modifier = Modifier.height(32.dp))
 
-        // Tombol WhatsApp dari Latihan 1
         Button(onClick = {
             val url = "https://wa.me/6281336171455"
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
