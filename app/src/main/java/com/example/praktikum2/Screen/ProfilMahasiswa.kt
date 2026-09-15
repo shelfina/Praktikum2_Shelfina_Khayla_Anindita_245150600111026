@@ -1,10 +1,13 @@
 package com.example.praktikum2.Screen
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
@@ -20,13 +23,15 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun ProfilMahasiswa() {
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        // Bagian Foto Profil
+    Row(
+        modifier = Modifier.padding(16.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
         Box(
             modifier = Modifier
                 .size(48.dp)
-                .background(Color.Cyan)
-                .clip(CircleShape),
+                .clip(CircleShape)
+                .background(Color.Cyan),
             contentAlignment = Alignment.Center
         ) {
             Text(text = "👤")
@@ -34,8 +39,10 @@ fun ProfilMahasiswa() {
 
         Spacer(modifier = Modifier.width(16.dp))
 
-        // Bagian Teks Nama dan NIM
-        Column {
+        Column(
+            modifier = Modifier.height(48.dp),
+            verticalArrangement = Arrangement.Center
+        ) {
             Text(text = "Nama: Shelfina Khayla Anindita", fontWeight = FontWeight.Bold)
             Text(text = "NIM: 245150600111026")
         }
